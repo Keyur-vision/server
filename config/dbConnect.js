@@ -1,5 +1,9 @@
+
+
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/allUsers").then(() => {
-  console.log("Database connected....")
-});
+const connectMongoDB = async (URI) => {
+  return mongoose.connect(URI)
+}
+
+module.exports = connectMongoDB
